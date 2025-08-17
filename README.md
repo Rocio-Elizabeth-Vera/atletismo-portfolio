@@ -1,30 +1,66 @@
-# Athlete website ideas
+# Rocío Elizabeth Vera - Portfolio Atlético
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Página web personal de Rocío Elizabeth Vera, atleta especializada en medio fondo y acuatlón, representante de La Matanza en competencias federativas.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/rocios-projects-44f4aa0f/v0-athlete-website-ideas)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/GnNmfpbd1JQ)
+## Sobre la Atleta
 
-## Overview
+Rocío es una atleta de medio fondo con 3 años de experiencia competitiva. Comenzó en el Club del Personal del Banco Central y actualmente entrena en la Asociación Atlética de Parque Chacabuco. Su mayor logro fue llegar a la final de los Juegos Bonaerenses 2022 en Mar del Plata, representando a La Matanza en la disciplina de acuatlón (400m natación + 4km carrera).
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Características de la Web
 
-## Deployment
+- **Perfil Personal**: Información sobre trayectoria y especialidades deportivas
+- **Logros Deportivos**: Participaciones en competencias locales, CADAV y CENARD
+- **Mejores Tiempos**: Registro de marcas personales desde 50m hasta 10km
+- **Galería**: Sección para fotos de competencias, entrenamientos y equipo
+- **Blog Personal**: Artículos sobre experiencias deportivas y competencias
+- **Contacto**: Formulario de contacto directo
 
-Your project is live at:
+## Tecnologías Utilizadas
 
-**[https://vercel.com/rocios-projects-44f4aa0f/v0-athlete-website-ideas](https://vercel.com/rocios-projects-44f4aa0f/v0-athlete-website-ideas)**
+- **Framework**: Next.js 14 con App Router
+- **Styling**: Tailwind CSS v4
+- **Componentes**: shadcn/ui
+- **Tipografía**: Google Fonts (Geist, Manrope)
+- **Iconos**: Lucide React
+- **Deployment**: Vercel
 
-## Build your app
+## Instalación y Desarrollo
 
-Continue building your app on:
+\`\`\`bash
+# Clonar el repositorio
+git clone https://github.com/rocio-elizabeth-vera/atletismo-portfolio.git
 
-**[https://v0.app/chat/projects/GnNmfpbd1JQ](https://v0.app/chat/projects/GnNmfpbd1JQ)**
+# Instalar dependencias
+npm install
 
-## How It Works
+# Ejecutar en desarrollo
+npm run dev
+\`\`\`
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
+
+## Estructura del Proyecto
+
+\`\`\`
+├── app/                 # App Router de Next.js
+├── components/          # Componentes React reutilizables
+├── public/             # Archivos estáticos (imágenes, etc.)
+└── README.md           # Este archivo
+\`\`\`
+
+## Competencias y Logros
+
+- **Juegos Bonaerenses 2022**: Finalista en acuatlón representando a La Matanza
+- **Competencias CENARD**: Participación en competencias federativas
+- **Maratones UNLAM**: Competencias fiscalizadas por La Matanza
+- **CADAV**: Competencias locales de atletismo
+- **Cross Country**: Participación en carreras de campo traviesa
+
+## Contacto
+
+- **Email**: rociorochi0419@gmail.com
+- **Entrenamiento**: Asociación Atlética de Parque Chacabuco
+
+---
+
+*Página web desarrollada para mostrar la trayectoria deportiva y logros de Rocío Elizabeth Vera en el atletismo de medio fondo y acuatlón.*

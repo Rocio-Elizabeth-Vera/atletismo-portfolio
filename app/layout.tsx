@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Sofia Martínez - Atleta de Medio Fondo",
+  title: "Rocio Elizabeth Vera - Atleta de Medio Fondo",
   description:
-    "Página oficial de Sofia Martínez, especialista en 800m y 1500m. Descubre su trayectoria, logros y estadísticas.",
+    "Página oficial de Rocio Elizabeth Vera, especialista en 800m y 1500m. Descubre su trayectoria, logros y estadísticas.",
   generator: "v0.app",
 }
 

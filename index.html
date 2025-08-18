@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rocío Elizabeth Vera - Atleta de Medio Fondo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Agregando Google Fonts para mejor tipografía -->
+    <!-- Agregando Google Fonts más profesionales -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1e40af',
+                        primary: '#2563eb',
                         secondary: '#3b82f6',
                         accent: '#f59e0b',
                         'accent-light': '#fbbf24'
@@ -29,62 +29,171 @@
         }
     </script>
     <style>
-        /* Mejorando estilos personalizados y animaciones */
-        .smooth-scroll {
+        /* Estilos CSS personalizados mucho más avanzados para que se vea como en v0 */
+        * {
             scroll-behavior: smooth;
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
         }
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 35%, #60a5fa 70%, #93c5fd 100%);
+            position: relative;
+            overflow: hidden;
         }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
         }
+        
         .stats-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
+        .stats-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
         .nav-blur {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .gradient-card {
+            background: linear-gradient(135deg, var(--from-color) 0%, var(--to-color) 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gradient-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
         .text-gradient {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .btn-primary {
-            background: linear-gradient(135deg, #f59e0b, #fbbf24);
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #d97706, #f59e0b);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
-        }
+        
         .section-padding {
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .gallery-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
         @media (max-width: 768px) {
             .section-padding {
-                padding: 3rem 0;
+                padding: 4rem 0;
+            }
+            .hero-gradient h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
-<body class="bg-gray-50 smooth-scroll font-sans">
+<body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold font-display text-gradient">Rocío Vera</span>
+                    <span class="text-2xl font-bold font-display text-gradient">Rocío Vera</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#inicio" class="text-gray-700 hover:text-primary transition-colors font-medium">Inicio</a>
@@ -118,27 +227,27 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="gradient-bg text-white pt-20 section-padding">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="inicio" class="hero-gradient text-white pt-20 section-padding relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <!-- Mejorando tipografía y espaciado del hero -->
-                <h1 class="text-5xl md:text-7xl font-bold font-display mb-6 leading-tight">Rocío Elizabeth Vera</h1>
-                <p class="text-xl md:text-3xl mb-12 text-blue-100 font-light">Atleta de Medio Fondo y Acuatlón</p>
+                <!-- Mejorando significativamente la tipografía y efectos del hero -->
+                <h1 class="text-6xl md:text-8xl font-black font-display mb-8 leading-tight floating-animation">Rocío Elizabeth Vera</h1>
+                <p class="text-2xl md:text-4xl mb-16 text-blue-100 font-light">Atleta de Medio Fondo y Acuatlón</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <div class="stats-card rounded-xl p-8">
-                        <div class="text-4xl font-bold text-accent-light mb-2">3:03</div>
-                        <div class="text-blue-100 font-medium">Mejor tiempo 800m</div>
+                    <div class="stats-card rounded-2xl p-10 fade-in">
+                        <div class="text-5xl font-black text-yellow-300 mb-3 font-display">3:03</div>
+                        <div class="text-blue-100 font-semibold text-lg">Mejor tiempo 800m</div>
                     </div>
-                    <div class="stats-card rounded-xl p-8">
-                        <div class="text-4xl font-bold text-accent-light mb-2">6:43</div>
-                        <div class="text-blue-100 font-medium">Mejor tiempo 1500m</div>
+                    <div class="stats-card rounded-2xl p-10 fade-in" style="animation-delay: 0.2s;">
+                        <div class="text-5xl font-black text-yellow-300 mb-3 font-display">6:43</div>
+                        <div class="text-blue-100 font-semibold text-lg">Mejor tiempo 1500m</div>
                     </div>
-                    <div class="stats-card rounded-xl p-8">
-                        <div class="text-4xl font-bold text-accent-light mb-2">3 años</div>
-                        <div class="text-blue-100 font-medium">Entrenando</div>
+                    <div class="stats-card rounded-2xl p-10 fade-in" style="animation-delay: 0.4s;">
+                        <div class="text-5xl font-black text-yellow-300 mb-3 font-display">3 años</div>
+                        <div class="text-blue-100 font-semibold text-lg">Entrenando</div>
                     </div>
                 </div>
-                <button onclick="scrollToSection('galeria')" class="btn-primary text-white px-10 py-4 rounded-xl font-semibold text-lg">
+                <button onclick="scrollToSection('galeria')" class="btn-primary text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl">
                     Ver Fotos y Videos
                 </button>
             </div>
@@ -246,39 +355,39 @@
     <section id="estadisticas" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 mb-6">Mis Mejores Tiempos</h2>
+                <h2 class="text-5xl md:text-6xl font-black font-display text-gray-900 mb-6">Mis Mejores Tiempos</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Marcas personales en diferentes distancias</p>
             </div>
-            <!-- Mejorando diseño de tarjetas de estadísticas -->
+            <!-- Mejorando significativamente las tarjetas de estadísticas con gradientes personalizados -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-2xl p-8 card-hover">
-                    <h3 class="text-lg font-semibold mb-3 opacity-90">800m</h3>
-                    <div class="text-4xl font-bold font-display mb-2">3:03</div>
+                <div class="gradient-card rounded-3xl p-10 text-white" style="--from-color: #3b82f6; --to-color: #1e40af;">
+                    <h3 class="text-xl font-bold mb-4 opacity-90">800m</h3>
+                    <div class="text-5xl font-black font-display mb-3">3:03</div>
                     <p class="text-blue-100 text-sm">Competencia Vélez - 01/06/24</p>
                 </div>
-                <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-2xl p-8 card-hover">
-                    <h3 class="text-lg font-semibold mb-3 opacity-90">1500m</h3>
-                    <div class="text-4xl font-bold font-display mb-2">6:43</div>
+                <div class="gradient-card rounded-3xl p-10 text-white" style="--from-color: #8b5cf6; --to-color: #7c3aed;">
+                    <h3 class="text-xl font-bold mb-4 opacity-90">1500m</h3>
+                    <div class="text-5xl font-black font-display mb-3">6:43</div>
                     <p class="text-purple-100 text-sm">Competencia CENARD - 16/08/25</p>
                 </div>
-                <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl p-8 card-hover">
-                    <h3 class="text-lg font-semibold mb-3 opacity-90">Milla (1.605m)</h3>
-                    <div class="text-4xl font-bold font-display mb-2">7:30.66</div>
+                <div class="gradient-card rounded-3xl p-10 text-white" style="--from-color: #10b981; --to-color: #059669;">
+                    <h3 class="text-xl font-bold mb-4 opacity-90">Milla (1.605m)</h3>
+                    <div class="text-5xl font-black font-display mb-3">7:30.66</div>
                     <p class="text-green-100 text-sm">Competencia CADAV - 01/06/25</p>
                 </div>
-                <div class="bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl p-8 card-hover">
-                    <h3 class="text-lg font-semibold mb-3 opacity-90">5km</h3>
-                    <div class="text-4xl font-bold font-display mb-2">25:50</div>
+                <div class="gradient-card rounded-3xl p-10 text-white" style="--from-color: #ef4444; --to-color: #dc2626;">
+                    <h3 class="text-xl font-bold mb-4 opacity-90">5km</h3>
+                    <div class="text-5xl font-black font-display mb-3">25:50</div>
                     <p class="text-red-100 text-sm">Maratón - 21/04/24</p>
                 </div>
-                <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 text-white rounded-2xl p-8 card-hover">
-                    <h3 class="text-lg font-semibold mb-3 opacity-90">10km</h3>
-                    <div class="text-4xl font-bold font-display mb-2">58:35</div>
+                <div class="gradient-card rounded-3xl p-10 text-white" style="--from-color: #f59e0b; --to-color: #d97706;">
+                    <h3 class="text-xl font-bold mb-4 opacity-90">10km</h3>
+                    <div class="text-5xl font-black font-display mb-3">58:35</div>
                     <p class="text-yellow-100 text-sm">Maratón - 24/03/24</p>
                 </div>
-                <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 text-white rounded-2xl p-8 card-hover">
-                    <h3 class="text-lg font-semibold mb-3 opacity-90">400m</h3>
-                    <div class="text-4xl font-bold font-display mb-2">1:26</div>
+                <div class="gradient-card rounded-3xl p-10 text-white" style="--from-color: #6366f1; --to-color: #4f46e5;">
+                    <h3 class="text-xl font-bold mb-4 opacity-90">400m</h3>
+                    <div class="text-5xl font-black font-display mb-3">1:26</div>
                     <p class="text-indigo-100 text-sm">Entrenamiento Chacabuco - 11/08/25</p>
                 </div>
             </div>

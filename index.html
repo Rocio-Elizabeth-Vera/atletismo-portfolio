@@ -228,33 +228,46 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-gradient text-white pt-20 section-padding relative">
-        <!-- Agregando imagen de fondo de atleta corriendo -->
+        <!-- Arreglando la ruta de la imagen de fondo para GitHub Pages y mejorando el diseño para que coincida con v0 -->
         <div class="absolute inset-0 z-0">
-            <img src="public/atleta-amanecer.png" alt="Atleta corriendo al amanecer" class="w-full h-full object-cover opacity-30">
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/70 to-blue-600/60"></div>
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/atleta-amanecer-HjRWlQ6pgPtfDbN7YpBcW2qLRnAcC4.png" alt="Atleta corriendo al amanecer" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/30"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <!-- Mejorando significativamente la tipografía y efectos del hero -->
-                <h1 class="text-6xl md:text-8xl font-black font-display mb-8 leading-tight floating-animation">Rocío Elizabeth Vera</h1>
-                <p class="text-2xl md:text-4xl mb-16 text-blue-100 font-light">Atleta de Medio Fondo y Acuatlón</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <div class="stats-card rounded-2xl p-10 fade-in">
-                        <div class="text-5xl font-black text-yellow-300 mb-3 font-display">3:03</div>
-                        <div class="text-blue-100 font-semibold text-lg">Mejor tiempo 800m</div>
+                <!-- Mejorando el diseño del hero para que coincida exactamente con v0 -->
+                <h1 class="text-5xl md:text-7xl font-black font-display mb-6 leading-tight">Rocío Elizabeth</h1>
+                <h1 class="text-5xl md:text-7xl font-black font-display mb-8 leading-tight text-teal-400">Vera</h1>
+                <p class="text-xl md:text-2xl mb-12 text-gray-200 font-medium">Atleta de Medio Fondo y Fondo - Especialista en Acuatlón</p>
+                
+                <!-- Agregando botones como en v0 -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                    <button onclick="scrollToSection('estadisticas')" class="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                        Ver Estadísticas
+                    </button>
+                    <button onclick="scrollToSection('galeria')" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300">
+                        Ver Fotos y Videos
+                    </button>
+                </div>
+                
+                <!-- Moviendo las estadísticas a la parte inferior como en v0 -->
+                <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-2">3:03</div>
+                        <div class="text-sm text-gray-300">800m PB</div>
                     </div>
-                    <div class="stats-card rounded-2xl p-10 fade-in" style="animation-delay: 0.2s;">
-                        <div class="text-5xl font-black text-yellow-300 mb-3 font-display">6:43</div>
-                        <div class="text-blue-100 font-semibold text-lg">Mejor tiempo 1500m</div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-2">6:43</div>
+                        <div class="text-sm text-gray-300">1500m PB</div>
                     </div>
-                    <div class="stats-card rounded-2xl p-10 fade-in" style="animation-delay: 0.4s;">
-                        <div class="text-5xl font-black text-yellow-300 mb-3 font-display">3 años</div>
-                        <div class="text-blue-100 font-semibold text-lg">Entrenando</div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-black text-white mb-2">3</div>
+                        <div class="text-sm text-gray-300">años</div>
                     </div>
                 </div>
-                <button onclick="scrollToSection('galeria')" class="btn-primary text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl">
-                    Ver Fotos y Videos
-                </button>
             </div>
         </div>
     </section>

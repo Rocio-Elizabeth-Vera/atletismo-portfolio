@@ -484,73 +484,165 @@
     <section id="blog" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mi Blog</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Blog y Reflexiones</h2>
                 <p class="text-xl text-gray-600">Reflexiones sobre mi trayectoria atlética</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <img src="public/atleta-amanecer.png" alt="Entrenamiento matutino" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-gray-500 mb-2">15 de Marzo, 2024</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Mi experiencia en los Juegos Bonaerenses</h3>
-                        <div class="blog-preview">
-                            <p class="text-gray-600 mb-4">Llegar a la final de acuatlón en Mar del Plata representando a La Matanza fue una experiencia increíble...</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Agregando estructura de blog con sidebar como en el componente original -->
+                <!-- Blog Posts -->
+                <div class="lg:col-span-2 space-y-8">
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="md:flex">
+                            <div class="md:w-1/3">
+                                <img src="public/acuatlon-atleta.png" alt="Juegos Bonaerenses" class="w-full h-48 md:h-full object-cover">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">Competencia</span>
+                                    <div class="flex items-center text-sm text-gray-500 gap-4">
+                                        <span>15 de Marzo, 2024</span>
+                                        <span>5 min</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Mi Experiencia en los Juegos Bonaerenses 2022</h3>
+                                <div class="blog-preview">
+                                    <p class="text-gray-600 mb-4">Representar a La Matanza en acuatlón fue una experiencia increíble. Te cuento cómo fue llegar a la final en Mar del Plata.</p>
+                                </div>
+                                <div class="blog-full hidden">
+                                    <p class="text-gray-600 mb-4">Llegar a la final de los Juegos Bonaerenses en Mar del Plata fue uno de los momentos más emocionantes de mi carrera deportiva. La disciplina de acuatlón combina 400 metros de natación seguidos de 4 kilómetros de carrera, lo que requiere una preparación muy específica.</p>
+                                    <p class="text-gray-600 mb-4">Durante meses me preparé tanto en la pileta como en la pista, trabajando las transiciones y la resistencia necesaria para ambas disciplinas. El día de la competencia, los nervios estaban a flor de piel, pero logré mantener la concentración y dar lo mejor de mí representando a La Matanza.</p>
+                                </div>
+                                <button onclick="toggleBlog(this)" class="text-primary hover:text-secondary font-semibold flex items-center">
+                                    <span class="read-more-text">Leer más</span>
+                                    <svg class="w-4 h-4 ml-1 read-more-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <div class="blog-full hidden">
-                            <p class="text-gray-600 mb-4">Llegar a la final de acuatlón en Mar del Plata representando a La Matanza fue una experiencia increíble. El acuatlón combina 400 metros de natación seguidos de 4 kilómetros de carrera, y requiere una preparación muy específica.</p>
-                            <p class="text-gray-600 mb-4">La transición de la natación a la carrera es el momento más crítico. Tus piernas están cansadas del agua y necesitas encontrar tu ritmo de carrera rápidamente. Entrenar esta transición fue clave para mi rendimiento.</p>
-                            <p class="text-gray-600 mb-4">Aunque no gané la medalla, llegar a esa final me demostró que el trabajo constante en Parque Chacabuco estaba dando frutos. Fue el impulso que necesitaba para seguir compitiendo a nivel federativo.</p>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="md:flex">
+                            <div class="md:w-1/3">
+                                <img src="public/atletas-entrenando.png" alt="Transición de clubes" class="w-full h-48 md:h-full object-cover">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">Personal</span>
+                                    <div class="flex items-center text-sm text-gray-500 gap-4">
+                                        <span>8 de Marzo, 2024</span>
+                                        <span>4 min</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Mi Transición del Banco Central a Parque Chacabuco</h3>
+                                <div class="blog-preview">
+                                    <p class="text-gray-600 mb-4">Después de una lesión, cambié de club y encontré una nueva familia deportiva. Te cuento sobre esta etapa de mi carrera.</p>
+                                </div>
+                                <div class="blog-full hidden">
+                                    <p class="text-gray-600 mb-4">La lesión que tuve mientras entrenaba en el club del personal del Banco Central fue un momento difícil, pero también una oportunidad de crecimiento. Cuando llegué a la Asociación Atlética de Parque Chacabuco hace tres años, no sabía qué esperar.</p>
+                                    <p class="text-gray-600 mb-4">Sin embargo, encontré no solo un lugar para entrenar, sino una verdadera familia deportiva. Los entrenamientos son exigentes pero el ambiente es increíble. Mis compañeros de entrenamiento se han convertido en grandes amigos y el apoyo mutuo es constante.</p>
+                                </div>
+                                <button onclick="toggleBlog(this)" class="text-primary hover:text-secondary font-semibold flex items-center">
+                                    <span class="read-more-text">Leer más</span>
+                                    <svg class="w-4 h-4 ml-1 read-more-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <button onclick="toggleBlog(this)" class="text-primary hover:text-secondary font-semibold flex items-center">
-                            <span class="read-more-text">Leer más</span>
-                            <svg class="w-4 h-4 ml-1 read-more-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="md:flex">
+                            <div class="md:w-1/3">
+                                <img src="public/female-athlete-running.png" alt="Competencia CENARD" class="w-full h-48 md:h-full object-cover">
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">Entrenamiento</span>
+                                    <div class="flex items-center text-sm text-gray-500 gap-4">
+                                        <span>28 de Febrero, 2024</span>
+                                        <span>6 min</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Competir en el CENARD: Un Nuevo Desafío</h3>
+                                <div class="blog-preview">
+                                    <p class="text-gray-600 mb-4">Empezar a competir de forma federativa ha sido un gran paso. Las diferencias con las competencias locales y mis aprendizajes.</p>
+                                </div>
+                                <div class="blog-full hidden">
+                                    <p class="text-gray-600 mb-4">Pasar de las competencias locales de CADAV y los maratones fiscalizados por UNLAM a competir de forma federativa en el CENARD ha sido todo un desafío. El nivel de competencia es mucho más alto y la preparación debe ser más específica.</p>
+                                    <p class="text-gray-600 mb-4">Mi mejor tiempo en 1500m lo logré justamente en una competencia del CENARD, marcando 6:43. Cada competencia es una oportunidad de aprender y mejorar, y aunque el camino es exigente, cada pequeño progreso vale la pena.</p>
+                                </div>
+                                <button onclick="toggleBlog(this)" class="text-primary hover:text-secondary font-semibold flex items-center">
+                                    <span class="read-more-text">Leer más</span>
+                                    <svg class="w-4 h-4 ml-1 read-more-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <!-- Agregando sección de frases inspiradoras como en el componente original -->
+                    <!-- Inspirational Quotes -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Frases que me Inspiran</h3>
+                        <div class="space-y-6">
+                            <blockquote class="border-l-4 border-primary pl-4">
+                                <p class="text-gray-600 italic mb-2">"Cada entrenamiento es una oportunidad de ser mejor que ayer."</p>
+                                <cite class="text-sm font-semibold text-primary">— Rocío Elizabeth Vera</cite>
+                            </blockquote>
+                            <blockquote class="border-l-4 border-primary pl-4">
+                                <p class="text-gray-600 italic mb-2">"Las lesiones nos enseñan a valorar cada paso que damos en la pista."</p>
+                                <cite class="text-sm font-semibold text-primary">— Rocío Elizabeth Vera</cite>
+                            </blockquote>
+                            <blockquote class="border-l-4 border-primary pl-4">
+                                <p class="text-gray-600 italic mb-2">"El atletismo no es solo correr, es encontrar tu límite y superarlo."</p>
+                                <cite class="text-sm font-semibold text-primary">— Rocío Elizabeth Vera</cite>
+                            </blockquote>
+                        </div>
                     </div>
-                </article>
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <img src="public/atletas-entrenando.png" alt="Grupo de entrenamiento" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-gray-500 mb-2">8 de Febrero, 2024</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Del Banco Central a Parque Chacabuco</h3>
-                        <div class="blog-preview">
-                            <p class="text-gray-600 mb-4">Mi transición entre clubes no fue fácil, especialmente después de la lesión que me alejó temporalmente del atletismo...</p>
+
+                    <!-- Agregando sección de semana de entrenamiento como en el componente original -->
+                    <!-- Training Schedule -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Mi Semana de Entrenamiento</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-medium text-sm">Lunes</span>
+                                <span class="text-sm text-gray-600">Velocidad - Series cortas</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-medium text-sm">Martes</span>
+                                <span class="text-sm text-gray-600">Fondo - Carrera continua</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-medium text-sm">Miércoles</span>
+                                <span class="text-sm text-gray-600">Técnica y fuerza</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-medium text-sm">Jueves</span>
+                                <span class="text-sm text-gray-600">Intervalos - 800m</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-medium text-sm">Viernes</span>
+                                <span class="text-sm text-gray-600">Recuperación activa</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-medium text-sm">Sábado</span>
+                                <span class="text-sm text-gray-600">Competencia o test</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="font-medium text-sm">Domingo</span>
+                                <span class="text-sm text-gray-600">Descanso completo</span>
+                            </div>
                         </div>
-                        <div class="blog-full hidden">
-                            <p class="text-gray-600 mb-4">Mi transición entre clubes no fue fácil, especialmente después de la lesión que me alejó temporalmente del atletismo. El Club del Personal del Banco Central fue donde descubrí mi pasión por correr, pero a veces los cambios son necesarios.</p>
-                            <p class="text-gray-600 mb-4">Llegar a la Asociación Atlética de Parque Chacabuco fue como encontrar una segunda familia. El grupo de entrenamiento, los entrenadores, y el ambiente me ayudaron a recuperar no solo mi forma física, sino también mi confianza.</p>
-                            <p class="text-gray-600 mb-4">Estos tres años en Chacabuco han sido los más productivos de mi carrera. He logrado mis mejores marcas personales y he encontrado la motivación para competir a nivel federativo en el CENARD.</p>
-                        </div>
-                        <button onclick="toggleBlog(this)" class="text-primary hover:text-secondary font-semibold flex items-center">
-                            <span class="read-more-text">Leer más</span>
-                            <svg class="w-4 h-4 ml-1 read-more-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
                     </div>
-                </article>
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <img src="public/female-athlete-running.png" alt="Corriendo en competencia" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-gray-500 mb-2">22 de Enero, 2024</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Compitiendo en el CENARD</h3>
-                        <div class="blog-preview">
-                            <p class="text-gray-600 mb-4">Dar el salto a las competencias federativas en el CENARD ha sido un desafío enorme pero muy gratificante...</p>
-                        </div>
-                        <div class="blog-full hidden">
-                            <p class="text-gray-600 mb-4">Dar el salto a las competencias federativas en el CENARD ha sido un desafío enorme pero muy gratificante. El nivel de competencia es mucho más alto que en las carreras locales, y eso me ha obligado a elevar mi entrenamiento.</p>
-                            <p class="text-gray-600 mb-4">Mi mejor tiempo en 1500m (6:43) lo logré precisamente en una competencia del CENARD. La pista, el ambiente competitivo, y correr junto a atletas de alto nivel me sacó lo mejor de mí.</p>
-                            <p class="text-gray-600 mb-4">Cada competencia federativa es una oportunidad de aprender y mejorar. Aunque a veces los resultados no son los esperados, siempre salgo con nuevas metas y motivación para seguir entrenando.</p>
-                        </div>
-                        <button onclick="toggleBlog(this)" class="text-primary hover:text-secondary font-semibold flex items-center">
-                            <span class="read-more-text">Leer más</span>
-                            <svg class="w-4 h-4 ml-1 read-more-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>

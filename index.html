@@ -274,46 +274,78 @@
 
     <!-- About Section -->
     <section id="sobre-mi" class="section-padding bg-white">
+        <!-- Eliminando imagen repetida y cambiando layout para coincidir con el diseño mostrado -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <!-- Actualizando títulos para coincidir con v0 -->
-                <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 mb-6">Sobre Mí</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Mi trayectoria en el atletismo</p>
+                <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 mb-6">Mi Trayectoria</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Desde mis inicios en el club del personal hasta competir en el CENARD, cada paso ha sido parte de mi crecimiento como atleta.</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <!-- Arreglando ruta de imagen para GitHub Pages -->
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/atleta-amanecer-HjRWlQ6pgPtfDbN7YpBcW2qLRnAcC4.png" alt="Rocío Vera entrenando" class="rounded-2xl shadow-2xl w-full">
+            
+            <!-- Nuevo layout de dos columnas como en la imagen de referencia -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Columna izquierda: Mi Camino en el Atletismo -->
+                <div class="bg-green-50 rounded-2xl p-8 border border-green-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Mi Camino en el Atletismo</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Mi historia comenzó en el club del personal del Banco Central, pero una lesión me llevó a un nuevo capítulo en la Asociación Atlética de Parque Chacabuco, donde llevo tres años entrenando y creciendo como atleta.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        He competido en maratones fiscalizados por la UNLAM y La Matanza, carreras locales por CADAV, y también en cross. Mi mejor logro fue llegar a la final de los Juegos Bonaerenses en 2022, representando a La Matanza en acuatlón.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Actualmente compito de forma federativa en el CENARD, donde continúo desafiándome y mejorando mis marcas personales en medio fondo.
+                    </p>
                 </div>
+                
+                <!-- Columna derecha: Momentos Clave -->
                 <div>
-                    <h3 class="text-3xl font-bold font-display text-gray-900 mb-8">Mi Historia</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Momentos Clave</h3>
                     <div class="space-y-8">
-                        <div class="flex items-start space-x-6">
-                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900 text-lg mb-2">Club del Personal del Banco Central</h4>
-                                <p class="text-gray-600 leading-relaxed">Mis inicios en el atletismo, donde desarrollé mi pasión por el deporte.</p>
+                                <h4 class="font-bold text-gray-900 text-lg mb-1">2019 Club del Personal</h4>
+                                <p class="text-gray-600 text-sm">Comenzó en el club del personal del Banco Central</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-6">
-                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900 text-lg mb-2">Superando Obstáculos</h4>
-                                <p class="text-gray-600 leading-relaxed">Después de una lesión, encontré nueva motivación y fuerza para continuar.</p>
+                                <h4 class="font-bold text-gray-900 text-lg mb-1">2021 Después de la Lesión</h4>
+                                <p class="text-gray-600 text-sm">Transición a la Asociación Atlética de Parque Chacabuco</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-6">
-                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900 text-lg mb-2">Asociación Atlética de Parque Chacabuco</h4>
-                                <p class="text-gray-600 leading-relaxed">Hace 3 años que entreno aquí, donde he encontrado mi hogar deportivo y he alcanzado mis mejores marcas.</p>
+                                <h4 class="font-bold text-gray-900 text-lg mb-1">2022 Juegos Bonaerenses</h4>
+                                <p class="text-gray-600 text-sm">Finalista en Mar del Plata representando a La Matanza en acuatlón</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-6">
-                            <div class="bg-accent text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900 text-lg mb-2">Competencia Federativa</h4>
-                                <p class="text-gray-600 leading-relaxed">Actualmente compito de forma federativa en el CENARD, representando mi pasión por el atletismo a nivel competitivo.</p>
+                                <h4 class="font-bold text-gray-900 text-lg mb-1">2024 Competencia Federativa</h4>
+                                <p class="text-gray-600 text-sm">Inicio de competencias federativas en el CENARD</p>
                             </div>
                         </div>
                     </div>
